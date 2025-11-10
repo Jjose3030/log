@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.parent {
+    background-color: royalblue;
+    width: 45rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+    position: relative;
+    overflow: hidden;
+}
+.log-cont {  
+    position: relative;
+     display: none;
+}
+.sign-cont {
+   
+    position: relative;
+}
+.log-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 27rem;
+}
+.log-message, .log-area, .sign-message, .sign-area {
+    width: 50%;
+    height: 100%;
+}
+
+.log-message, .sign-message {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    background-color: black;
+    flex-shrink: 0;
+}
+.log-message h2, .sign-message h2 {
+    font-size: 2.2rem;
+    margin-block: 5px;
+    flex-shrink: 0;
+    position: relative;
+}
+.log-message p, .sign-message p {
+    font-size: 18px;
+}
+#register-btn, #login-button {
+    padding: 8px 25px;
+    border: none;
+    outline: 1.5px solid white;
+    color: white;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .35s linear;
+}
+#register-btn:hover, #login-button:hover {
+    background-color: white;
+    color: black;
+    outline-color: none;
+}
+.log-area, .sign-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    
+}
+.log-area > h2, .sign-area > h2 {
+    text-align: center;
+    font-size: 2.2rem;
+
+}
+#log-form, #sign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+
+}
+.log-group, .sign-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.input-group {
+    position: relative;
+}
+.input-group input {
+    
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 17px;
+}
+span.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    cursor: pointer;
+}
+.icon1 {
+    pointer-events: none !important;
+}
+.input-group input::placeholder {
+    color: black;
+    font-weight: 600;
+    font-size: 19px;
+}
+.error {
+    font-size: 13px;
+    margin-left: 6px;
+    color: white;
+    display: none;
+}
+.input-error {
+    border: 1.5px solid black !important;
+}
+.forget {
+    width: 100%;
+    margin-block: 7px;
+    text-align: center;
+}
+.log-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: black;
+}
+.forget a {
+    text-decoration: none;
+    font-size: 16.5px;
+    color: black;
+    transition: .3s ease;
+}
+.forget a:visited {
+    color: black;
+}
+.forget a:hover {
+    color: rgb(63, 62, 62);
+}
+.log-btn, .create-btn {
+    width: 100%;
+    padding: 13px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.log-btn:active, .create-btn:active {
+    scale: 0.95;
+}
+.log-btn:hover, .create-btn:hover {
+    background-color: rgb(26, 25, 25);
+}
+.social-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    padding-block: 2px;
+}
+.social-cont p {
+    font-size: 17px;
+}
+.social-icon-cont {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2.5px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .35s ease;
+}
+.social-icon:hover {
+    background-color: rgb(41, 40, 40);
+}
+.social-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+
+.sign-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 27rem;
+}
+.sign-message {
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}
+.width {
+    width: 100% !important;
+    transition: width 1s linear;
+    animation: border 1s linear;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+ @keyframes border {
+     from {
+        border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+     }
+     to{
+        border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+     }
+ }
+
+ .reverse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transition: 1s linear;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+ }
+ @media (max-width: 500px) {
+    .reverse {
+    position: unset;
+    top: unset;
+    right: unset;
+    width: 100%;
+    transition: 1s linear;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 100px;
+    animation: border 1s linear;
+ }
+
+    body {
+        padding-block: 20px;
+    }
+    .parent {
+    
+        /* min-height: 100vh; */
+    }
+    .sign-section, .log-section {
+        flex-direction: column;
+        height: unset;
+    }
+    .sign-section {
+        flex-direction: column-reverse;
+    }
+    .sign-message, .log-message {
+        padding: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .log-message {
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 20px;
+    }
+    .sign-area, .log-area {
+        width: 100%;
+    }
+    .width {
+        border-bottom-left-radius: 20px;
+    }
+    .sign-message {
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        
+         
+    }
+    .new {
+        height: 50vh;
+    }
+ }
