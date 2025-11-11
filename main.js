@@ -182,7 +182,7 @@ signForm.addEventListener("submit", (e)=>{
     }
 
     if(createPassword.value === "") {
-        showError(createPassword, "Create a password")
+        showError(createPassword, "Create a password of your choice")
     } else if (password.value.trim().length < 8 ){
         showError(createPassword, "Password must be at least 8 characters")
     } else {
