@@ -24,7 +24,7 @@ register.addEventListener("click", ()=> {
     logMessage.classList.add("width");
     logArea.style.display = "none";
     signMessage.classList.remove("reverse");
-    signArea.style.display = "block";
+    signArea.style.display = "flex";
     
     none.forEach((item)=> {
         item.style.display = "none";
@@ -53,7 +53,7 @@ logBtn.addEventListener("click", ()=> {
 
     
     setTimeout(() => {
-        logArea.style.display = "block";
+        logArea.style.display = "flex";
     logIn.style.display = "block";
         signUp.style.display = "none"
     
