@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: whitesmoke;
+    background-color: rgb(165, 161, 161);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -56,6 +56,7 @@ body {
     margin-block: 5px;
     flex-shrink: 0;
     position: relative;
+    text-align: center;
 }
 .log-message p, .sign-message p {
     font-size: 18px;
@@ -261,7 +262,7 @@ span.icon {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
  }
- @media (max-width: 500px) {
+ @media (max-width: 650px) {
     .reverse {
     position: unset;
     top: unset;
